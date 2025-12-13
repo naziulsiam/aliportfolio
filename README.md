@@ -224,7 +224,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - GitHub: [@naziulsiam](https://github.com/naziulsiam)
 - Email: naziulsiam3@gmail.com
-- LinkedIn: [Add your LinkedIn URL]
+- LinkedIn: 
 
 ## 🙏 Acknowledgments
 
