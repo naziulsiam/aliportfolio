@@ -4,6 +4,7 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![WCAG AA](https://img.shields.io/badge/WCAG-AA_Compliant-blue)
 
 A modern, cybersecurity-themed personal portfolio showcasing my experience, projects, and skills in cybersecurity and penetration testing.
 
@@ -22,12 +23,29 @@ This portfolio website highlights my:
 
 ## ✨ Features
 
+### Design & UX
 - 🎨 **Cybersecurity Theme**: Dark mode design with cyan/purple accents and animated grid background
 - 📱 **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
 - ⚡ **Fast Loading**: Optimized performance with smooth animations
-- ♿ **Accessible**: WCAG compliant with proper ARIA labels and semantic HTML
-- 📧 **Contact Form**: Integrated contact form for direct communication
+- 🎭 **Custom 404 Page**: Cybersecurity-themed error page with helpful navigation
+
+### Accessibility & SEO
+- ♿ **WCAG AA Compliant**: Improved color contrast and accessibility features
+- 🔍 **SEO Optimized**: Comprehensive meta tags, Open Graph, and Twitter Cards
+- ⌨️ **Keyboard Navigation**: Full keyboard accessibility with visible focus states
+- 📢 **Screen Reader Friendly**: Proper ARIA labels and semantic HTML
+
+### Interactive Features
+- 📧 **Contact Form**: Integrated contact form with validation and feedback
+- ✅ **Form Validation**: Real-time validation with helpful error messages
+- 🔄 **Loading States**: Visual feedback during form submission
 - 🔝 **Smooth Navigation**: Fixed navbar with smooth scrolling and active section highlighting
+- 🔝 **Back to Top**: Convenient scroll-to-top button
+
+### Technical
+- 📄 **Modular Structure**: Separated HTML, CSS, and JavaScript files
+- 🔒 **PWA Ready**: Web manifest configured for progressive web app support
+- 🎯 **Clean Code**: Well-organized, commented, and maintainable codebase
 
 ## 🛠️ Technologies Used
 
@@ -42,10 +60,14 @@ This portfolio website highlights my:
 ```
 aliportfolio/
 ├── index.html          # Main HTML file
+├── 404.html             # Custom error page
 ├── css/
 │   └── style.css       # Custom styles and animations
 ├── js/
 │   └── script.js       # Interactive functionality
+├── assets/
+│   ├── site.webmanifest  # PWA configuration
+│   └── README.md         # Asset generation guide
 ├── alisiam.pdf         # Downloadable CV/Resume
 └── README.md           # Project documentation
 ```
@@ -83,37 +105,48 @@ No build tools or dependencies required! This is a static website that runs dire
 ### Update Personal Information
 
 1. **Contact Details** (in `index.html`):
-   - Email: Line ~850
-   - Phone: Line ~860
-   - Social Links: Lines ~875-885
+   - Email: Search for `naziulsiam3@gmail.com`
+   - Phone: Search for `+44 7944 250839`
+   - LinkedIn: Update the placeholder link in the contact section
 
 2. **Content Sections**:
-   - About: Lines ~190-220
-   - Experience: Lines ~230-350
-   - Education: Lines ~360-380
-   - Projects: Lines ~390-450
-   - Skills: Lines ~460-620
+   - About: `#about` section
+   - Experience: `#experience` section
+   - Education: `#education` section
+   - Projects: `#projects` section
+   - Skills: `#skills` section
 
 ### Modify Styling
 
-- **Colors**: Edit CSS variables in `css/style.css` (lines 5-9)
+- **Colors**: Edit CSS variables in `css/style.css` (lines 5-15)
 - **Animations**: Modify keyframes in `css/style.css`
 - **Layout**: Adjust Tailwind classes in `index.html`
 
+### Add Favicons
+
+See `assets/README.md` for detailed instructions on generating favicon files. Current site uses a temporary SVG emoji.
+
 ### Update CV/Resume
 
-Replace `alisiam.pdf` with your own resume file (keep the same filename or update the link in `index.html` line 173).
+Replace `alisiam.pdf` with your own resume file (keep the same filename or update the link in `index.html`).
 
 ## 📧 Contact Form Setup
 
 The contact form uses [FormSubmit.co](https://formsubmit.co) for handling submissions.
 
 **To use your own email:**
-1. Update line ~890 in `index.html`:
+1. Find the form in `index.html` (search for `formsubmit.co`)
+2. Replace the email in the action URL:
    ```html
    <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
    ```
-2. Replace `YOUR_EMAIL@example.com` with your actual email address
+3. First submission will require email verification from FormSubmit
+
+**Features included:**
+- Real-time validation (name, email, message)
+- Loading spinner during submission
+- Success/error feedback messages
+- Form reset on successful submission
 
 ## 🔧 Deployment
 
@@ -124,10 +157,17 @@ The contact form uses [FormSubmit.co](https://formsubmit.co) for handling submis
 3. Click **Save**
 4. Your site will be live at `https://yourusername.github.io/aliportfolio/`
 
+### Custom Domain
+
+1. Add a `CNAME` file with your domain
+2. Configure DNS settings with your domain provider
+3. Enable HTTPS in GitHub Pages settings
+
 ### Other Platforms
 
 - **Netlify**: Connect your GitHub repo for automatic deployments
 - **Vercel**: Import project and deploy with zero configuration
+- **Cloudflare Pages**: Fast global CDN deployment
 - **Any Static Host**: Upload the entire folder to any web server
 
 ## 📝 Sections Overview
@@ -141,15 +181,28 @@ The contact form uses [FormSubmit.co](https://formsubmit.co) for handling submis
 7. **Documentation**: Security documentation work
 8. **Contact**: Contact form and information
 
+## ✅ Recent Improvements
+
+- ✅ Separated CSS and JavaScript into external files
+- ✅ Added comprehensive SEO meta tags
+- ✅ Improved WCAG AA color contrast compliance
+- ✅ Added form validation with real-time feedback
+- ✅ Created custom 404 error page
+- ✅ Added PWA web manifest
+- ✅ Enhanced accessibility with ARIA labels
+- ✅ Improved keyboard navigation and focus states
+
 ## 🎯 Future Enhancements
 
-- [ ] Add blog/articles section
-- [ ] Implement dark/light theme toggle
+- [ ] Generate proper favicon files (multiple sizes)
 - [ ] Add project screenshots and demos
-- [ ] Integrate analytics (privacy-friendly)
+- [ ] Implement dark/light theme toggle
+- [ ] Add blog/articles section
+- [ ] Integrate privacy-friendly analytics
 - [ ] Add certifications section
 - [ ] Create downloadable project case studies
 - [ ] Add testimonials/recommendations
+- [ ] Optimize images with WebP format
 
 ## 🤝 Contributing
 
@@ -171,13 +224,14 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - GitHub: [@naziulsiam](https://github.com/naziulsiam)
 - Email: naziulsiam3@gmail.com
-- LinkedIn:
+- LinkedIn: [Add your LinkedIn URL]
 
 ## 🙏 Acknowledgments
 
 - Tailwind CSS for the utility-first framework
 - FormSubmit.co for contact form handling
 - The cybersecurity community for inspiration
+- Open source contributors and the web development community
 
 ---
 
