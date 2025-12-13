@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Ali Siam</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-gray-100 cyber-grid">
+
+    <div class="error-404">
+        <div class="max-w-4xl mx-auto">
+            <!-- Error Code -->
+            <div class="error-404-code mb-8" aria-label="Error 404">
+                404
+            </div>
+            
+            <!-- Terminal-style error message -->
+            <div class="bg-slate-900/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 glow-cyan mb-8">
+                <div class="font-mono text-left space-y-2">
+                    <p class="text-red-400">
+                        <span class="text-cyan-400">$</span> Access Denied
+                    </p>
+                    <p class="text-gray-300">
+                        <span class="text-cyan-400">&gt;</span> ERROR: The requested resource could not be found.
+                    </p>
+                    <p class="text-gray-400">
+                        <span class="text-cyan-400">&gt;</span> Status Code: 404
+                    </p>
+                    <p class="text-gray-400">
+                        <span class="text-cyan-400">&gt;</span> Message: Page does not exist in the current directory.
+                    </p>
+                    <p class="text-purple-400 mt-4">
+                        <span class="text-cyan-400">&gt;</span> Suggestion: Navigate back to a secure location.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Message -->
+            <h1 class="text-3xl md:text-4xl font-bold text-cyan-300 mb-4">
+                Oops! This Page Doesn't Exist
+            </h1>
+            <p class="text-xl text-gray-300 mb-8">
+                The page you're looking for might have been moved, deleted, or never existed.
+            </p>
+            
+            <!-- Navigation Options -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="index.html" class="btn-glow bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold py-3 px-8 rounded-lg transition" aria-label="Return to homepage">
+                    ← Go Home
+                </a>
+                <a href="index.html#contact" class="btn-glow bg-transparent border-2 border-cyan-500 hover:bg-cyan-500/10 text-cyan-400 font-bold py-3 px-8 rounded-lg transition" aria-label="Contact me">
+                    Contact Me
+                </a>
+            </div>
+            
+            <!-- Helpful Links -->
+            <div class="text-gray-400">
+                <p class="mb-4">You might be looking for:</p>
+                <div class="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
+                    <a href="index.html#about" class="block p-3 bg-slate-800/30 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition">
+                        <span class="text-cyan-400 mr-2">▹</span> About Me
+                    </a>
+                    <a href="index.html#experience" class="block p-3 bg-slate-800/30 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition">
+                        <span class="text-cyan-400 mr-2">▹</span> Experience
+                    </a>
+                    <a href="index.html#projects" class="block p-3 bg-slate-800/30 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition">
+                        <span class="text-cyan-400 mr-2">▹</span> Projects
+                    </a>
+                    <a href="index.html#skills" class="block p-3 bg-slate-800/30 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition">
+                        <span class="text-cyan-400 mr-2">▹</span> Skills
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Animated Glitch Text -->
+            <div class="mt-12 text-gray-500 font-mono text-sm">
+                <p class="terminal-cursor">_</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple script for animation -->
+    <script>
+        // Add a simple animation on load
+        window.addEventListener('load', () => {
+            const errorCode = document.querySelector('.error-404-code');
+            if (errorCode) {
+                errorCode.style.opacity = '0';
+                errorCode.style.transform = 'scale(0.8)';
+                
+                setTimeout(() => {
+                    errorCode.style.transition = 'all 0.6s ease-out';
+                    errorCode.style.opacity = '1';
+                    errorCode.style.transform = 'scale(1)';
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
