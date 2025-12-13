@@ -7,6 +7,12 @@
     --cyber-blue: #00f3ff;
     --cyber-purple: #bd00ff;
     --cyber-pink: #ff006e;
+    
+    /* WCAG AA Compliant Colors */
+    --text-primary: #ffffff;        /* White - AAA */
+    --text-secondary: #e5e7eb;      /* Light gray - AA+ */
+    --text-muted: #cbd5e1;          /* Improved from #b0b0b0 for better contrast */
+    --text-on-dark: #f1f5f9;        /* Slightly off-white for reduced eye strain */
 }
 
 /* Animated Grid Background */
@@ -112,4 +118,87 @@ html {
 .loading-screen.hidden {
     opacity: 0;
     pointer-events: none;
+}
+
+/* Form Error Messages */
+.error-message {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    color: #fca5a5; /* Improved red for better contrast */
+}
+
+/* Form Success/Error Alerts */
+.form-alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+/* Improved Focus States for Accessibility */
+*:focus {
+    outline: 2px solid #00f3ff;
+    outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid #00f3ff;
+    outline-offset: 2px;
+}
+
+/* Skip to Content Link */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #00f3ff;
+    color: #0a0e27;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 100;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Improved Link Contrast */
+a {
+    color: #00f3ff;
+}
+
+a:hover {
+    color: #5dfdff;
+}
+
+/* 404 Page Styles */
+.error-404 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-404-code {
+    font-size: 8rem;
+    font-weight: bold;
+    line-height: 1;
+    background: linear-gradient(135deg, #00f3ff 0%, #bd00ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (max-width: 640px) {
+    .error-404-code {
+        font-size: 5rem;
+    }
 }
