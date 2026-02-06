@@ -1,0 +1,207 @@
+/* ============================================
+   Ali Siam Portfolio - Custom Styles
+   ============================================ */
+
+/* Professional Color Palette */
+:root {
+    --primary-navy: #1e3a8a;
+    /* Navy Blue - trust, professionalism */
+    --secondary-slate: #475569;
+    /* Slate - sophistication */
+    --accent-blue: #3b82f6;
+    /* Blue - modern, clean */
+    --highlight-amber: #f59e0b;
+    /* Amber - subtle energy */
+
+    /* WCAG AA Compliant Colors */
+    --text-primary: #ffffff;
+    /* White - AAA */
+    --text-secondary: #e5e7eb;
+    /* Light gray - AA+ */
+    --text-muted: #cbd5e1;
+    /* Improved contrast */
+    --text-on-dark: #f1f5f9;
+    /* Slightly off-white for reduced eye strain */
+}
+
+/* Clean Professional Background */
+.cyber-grid {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+/* Professional Elevation */
+.glow-cyan {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.glow-cyan-strong {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.glow-purple {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Professional Gradient */
+.gradient-text {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Terminal Cursor Animation */
+.terminal-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Hover Effect */
+.card-hover {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.15);
+}
+
+/* Button Glow */
+.btn-glow {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Smooth Scroll Offset for Fixed Nav */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a0e27;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-out;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Form Error Messages */
+.error-message {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    color: #fca5a5;
+    /* Improved red for better contrast */
+}
+
+/* Form Success/Error Alerts */
+.form-alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+/* Improved Focus States for Accessibility */
+*:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Skip to Content Link */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 100;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Improved Link Contrast */
+a {
+    color: #3b82f6;
+}
+
+a:hover {
+    color: #60a5fa;
+}
+
+/* 404 Page Styles */
+.error-404 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-404-code {
+    font-size: 8rem;
+    font-weight: bold;
+    line-height: 1;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (max-width: 640px) {
+    .error-404-code {
+        font-size: 5rem;
+    }
+}
