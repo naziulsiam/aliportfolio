@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b09">
+  <title>404 // Access Denied — Ali Siam</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a0f0d%22/><text x=%2250%22 y=%2265%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2248%22 font-weight=%22700%22 fill=%22%239fef00%22>AS</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #070b09;
+      --panel: #0c1210;
+      --lime: #9fef00;
+      --text: #f0f6f2;
+      --muted: #93a199;
+      --line: #26322c;
+      --mono: 'IBM Plex Mono', monospace;
+      --sans: 'Manrope', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--ink);
+      color: var(--text);
+      font-family: var(--sans);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.22;
+      background-image: linear-gradient(#ffffff04 1px, transparent 1px), linear-gradient(90deg, #ffffff04 1px, transparent 1px);
+      background-size: 34px 34px;
+    }
+    .card {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+      width: 100%;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 42px;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font: 500 11px var(--mono);
+      letter-spacing: 0.12em;
+      color: #ff5555;
+      border: 1px solid #ff555540;
+      background: #ff555510;
+      padding: 6px 12px;
+      margin-bottom: 24px;
+    }
+    .status-badge i {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ff5555;
+      box-shadow: 0 0 10px #ff5555;
+    }
+    h1 {
+      font-family: var(--mono);
+      font-size: clamp(64px, 12vw, 110px);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+      color: var(--lime);
+      margin: 0 0 16px 0;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+    }
+    p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+      margin: 0 0 28px 0;
+    }
+    .terminal {
+      background: #060907;
+      border: 1px solid var(--line);
+      padding: 18px 20px;
+      font: 400 13px var(--mono);
+      color: #b0bcb5;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .terminal span.prompt { color: var(--lime); }
+    .terminal span.err { color: #ff5555; }
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      padding: 0 24px;
+      font: 600 12px var(--mono);
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .btn.primary {
+      background: var(--lime);
+      color: var(--ink);
+    }
+    .btn.primary:hover {
+      background: #caff66;
+    }
+    .btn.ghost {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: #090e0b;
+    }
+    .btn.ghost:hover {
+      border-color: var(--lime);
+      color: var(--lime);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="status-badge"><i></i> 404 // RESOURCE NOT FOUND</div>
+    <h1>404</h1>
+    <h2>Target directory unreachable.</h2>
+    <p>The endpoint you requested does not exist or has been relocated within the system.</p>
+    
+    <div class="terminal">
+      <div><span class="prompt">$</span> systemctl status route --target</div>
+      <div><span class="err">[FAIL]</span> 404_PAGE_NOT_FOUND</div>
+      <div><span class="prompt">&gt;</span> Redirecting operator to secure root node...</div>
+    </div>
+
+    <div class="actions">
+      <a href="index.html" class="btn primary">RETURN TO HOMEPAGE &rarr;</a>
+      <a href="index.html#contact" class="btn ghost">CONTACT OPERATOR</a>
+    </div>
+  </div>
+</body>
+</html>
